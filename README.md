@@ -95,31 +95,31 @@ AI-ML-DataVisualization/
 ## Data Visualization
 
 * JavaScript (Plotly JS, D3 JS, Sigma JS)
-  * [Data Surface Plotting in 3D](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/JavaScript/3DSurfacePlot)
-  * [Chord in D3JS](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/JavaScript/ChordD3)
-  * [MultipleBiPartiteGraph in D3JS](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/JavaScript/MultipleBiPartiteGraph)
-  * [RadarSmoothed](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/JavaScript/RadarSmoothed)
-  * [Data Range Slider](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/RangeSlider)
-  * [Line Chart](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/SimpleLineChart)
-  * [Website Navigation Flow Reseach using Sunburst 3D](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/SunburstD3)
+  * [Data Surface Plotting in 3D](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/JavaScript/3DSurfacePlot)
+  * [Chord in D3JS](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/JavaScript/ChordD3)
+  * [MultipleBiPartiteGraph in D3JS](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/JavaScript/MultipleBiPartiteGraph)
+  * [RadarSmoothed](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/JavaScript/RadarSmoothed)
+  * [Data Range Slider](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/RangeSlider)
+  * [Line Chart](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/SimpleLineChart)
+  * [Website Navigation Flow Reseach using Sunburst 3D](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/SunburstD3)
 * Python
   * [Plotly](https://github.com/plotly/documentation/blob/source-design-merge/_posts/python/fundamentals/ipython-notebooks/jupyter_tutorial.ipynb)
   * [Seaborn](https://github.com/mwaskom/seaborn/tree/master/examples)
   * Matplotlib
 * R
-  * [Instructions](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/Instructions)
+  * [Instructions](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/R/Instructions)
   * BasicsOfR
-    * [Computation](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/Part1.R)
-    * [Loading Datasets](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/Part1.R)
-    * [Data Cleaning](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/Part1.R)
-    * [Basic Statistical Tests](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/Part2.R)
-    * [NA Handling](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/NAHandling.R)
-  * [dplyr](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/dplyr.pdf)
+    * [Computation](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/R/BasicsOfR/Part1.R)
+    * [Loading Datasets](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/R/BasicsOfR/Part1.R)
+    * [Data Cleaning](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/R/BasicsOfR/Part1.R)
+    * [Basic Statistical Tests](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/R/BasicsOfR/Part2.R)
+    * [NA Handling](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/R/BasicsOfR/NAHandling.R)
+  * [dplyr](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/R/dplyr.pdf)
   * Plotly
-  * [ggplot2](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/ggplot2.R)
-  * [ggplot2 Notes](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/ggplot2Notes.txt)
+  * [ggplot2](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/R/ggplot2.R)
+  * [ggplot2 Notes](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/R/ggplot2Notes.txt)
   * SunburstR
-* [Sample Data](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/SampleData)
+* [Sample Data](https://github.com/SaadAAkash/AI-ML-DataVisualization/tree/master/DataVisualization/SampleData)
 
 ## Contributing
 
