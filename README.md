@@ -1,10 +1,11 @@
 # AI-ML-DataVisualization [![GitHub license](https://img.shields.io/badge/license-GLWTPL-blue.svg)](https://github.com/me-shaon/GLWTPL/blob/master/NSFW_LICENSE) [![Coverage Status](https://img.shields.io/badge/coverage-90%25-yellow.svg)]() [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]() [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/SaadAAkash/Web-Development/graphs/commit-activity) [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![made-with-love](https://img.shields.io/badge/Made%20with-Love-1f425f.svg)](https://saadaakash.bitbucket.io/)
-:a: :heavy_exclamation_mark:  AI | ML | DL | RL | Data Science | Data Visualization
-:heavy_check_mark: LISP & Prolog
-:heavy_check_mark: AI Basic Algorithm Codes in Java, C++. R & Python
-:heavy_check_mark: Interactive Data Visualizations in JavaScript, R & Python
-:heavy_check_mark: Resources on OCR, ML, DL & RL
-:heavy_check_mark: Network Visualizations in Networkx & Gephi
+:a: :heavy_exclamation_mark:  AI | ML | DL | RL | Data Science | Data Visualization  
+
+:heavy_check_mark: LISP & Prolog  
+:heavy_check_mark: AI Basic Algorithm Codes in Java, C++. R & Python  
+:heavy_check_mark: Interactive Data Visualizations in JavaScript, R & Python  
+:heavy_check_mark: Resources on OCR, ML, DL & RL  
+:heavy_check_mark: Network Visualizations in Networkx & Gephi  
 
 ## Directory Structure
 
