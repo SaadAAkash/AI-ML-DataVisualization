@@ -79,7 +79,15 @@ AI-ML-DataVisualization/
 	  * [Implementation of Graph](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/graph.pl)
 	  * [Implementation of TowerOfHanoi](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/towerofhanoi.pl)
 	  * [Reverse A List](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/listreverse.pl)
-* [AI Lisp Basic Codes](https://github.com/SaadAAkash/AILispCodes)
+
+* AI Lisp Basic Codes
+  * [Recursion]()
+  * [MinMax]()
+  * [UserInput]()
+  * [Input+MinMax]()
+  * [Removal]()
+  * [SelectionSort]()
+
 * [AI Java Basic Implementations](https://github.com/SaadAAkash/AICodes)
   * 8 Puzzle (C++)
   * 8 Puzzle Implementation (Java)
