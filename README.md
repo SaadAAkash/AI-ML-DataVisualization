@@ -7,6 +7,14 @@ The following is a high level overview of relevant files and folders.
 
 ```
 AI-ML-DataVisualization/
+├── AIinLISP/
+│   ├── Recursion
+│   ├── MinMax
+│   ├── UserInput
+│   ├── Input+MinMax  
+│   ├── Removal
+│   ├── SelectionSort
+│   └── ...
 ├── AIinProlog/
 │   ├── Instructions
 │   ├── EnvironmentSetup
@@ -16,17 +24,8 @@ AI-ML-DataVisualization/
 │       ├── Graph
 │       ├── TowerOfHanoi
 │       └── ...
-├── AIinLISP/
-│   ├── Recursion
-│   ├── MinMax
-│   ├── UserInput
-│   ├── Input+MinMax  
-│   ├── Removal
-│   ├── SelectionSort
-│   └── ...
 ├── AIinJavaAndC++/
 │   ├── 8PuzzleSolver
-│   ├── 8PuzzleSolver2
 │   ├── AStarPuzzle
 │   ├── ClassRoutineScheduler
 │   ├── GeneticAlgorithm  
@@ -68,7 +67,17 @@ AI-ML-DataVisualization/
 
 ```
 
-## AI Course Study Codebase (Prolog, LISP, MATLAB, JAVA & JS)
+## AI in Lisp
+
+* AI Lisp Basic Codes
+  * [Recursion](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_a_recursion.lisp)
+  * [MinMax](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_b_minmax.lisp)
+  * [UserInput](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_c_userinput.lisp)
+  * [Input+MinMax](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_d_input_minmax.lisp)
+  * [Removal](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_e_removal.lisp)
+  * [SelectionSort](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_f_selectionsort.lisp)
+
+## AI in Prolog
 
 * AI Prolog Basic Codes
   * [Instructions](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Instructions)
@@ -80,21 +89,17 @@ AI-ML-DataVisualization/
 	  * [Implementation of TowerOfHanoi](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/towerofhanoi.pl)
 	  * [Reverse A List](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/listreverse.pl)
 
-* AI Lisp Basic Codes
-  * [Recursion](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_a_recursion.lisp)
-  * [MinMax](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_b_minmax.lisp)
-  * [UserInput](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_c_userinput.lisp)
-  * [Input+MinMax](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_d_input_minmax.lisp)
-  * [Removal](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_e_removal.lisp)
-  * [SelectionSort](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_f_selectionsort.lisp)
+## AI in Java & C++
 
-* [AI Java Basic Implementations](https://github.com/SaadAAkash/AICodes)
-  * 8 Puzzle (C++)
-  * 8 Puzzle Implementation (Java)
-  * Genetic Algorithm Implementation
-  * Class Routine Auto Scheduler
-  * IDS with BFS
-  * KMeansClustering 
+* AI in Java & C++ Basic Implementations
+  * [8 Puzzle](https://github.com/SaadAAkash/AICodes/tree/master/8-puzzle-solver)
+  * [A* Algorithm Implementation](https://github.com/SaadAAkash/AICodes/tree/master/AStarPuzzle)
+  * [Class Routine Scheduler](https://github.com/SaadAAkash/AICodes/tree/master/ClassRoutineScheduler)
+  * [Genetic Algorithm Implementation](https://github.com/SaadAAkash/AICodes/tree/master/GeneticAlgo)
+  * [IDS with BFS](https://github.com/SaadAAkash/AICodes/tree/master/IDSwithBFS)
+  * [KMeansClustering](https://github.com/SaadAAkash/AICodes/tree/master/KMeansClusteringLab)
+
+## OCR
 
 * OCR Digit Detection
   * [DataSet (English & Bengali)](https://github.com/SaadAAkash/AICodes/tree/master/OCR%20Bang%20Eng%20Numbers%20DATASET)
@@ -107,6 +112,11 @@ AI-ML-DataVisualization/
   * [Titanic : Machine Learning from Disaster](https://github.com/iphton/Kaggle-Competition/tree/gh-pages/Titanic%20Competition)
   * [Cheatsheets for quick beats](https://github.com/kailashahirwar/cheatsheets-ai)
   * [Flux](http://fluxml.ai/)
+
+## Network Visualization
+
+* Networkx
+* Gephi
 
 ## Data Visualization
 
