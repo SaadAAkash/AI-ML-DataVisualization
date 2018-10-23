@@ -42,18 +42,21 @@ AI-ML-DataVisualization/
 │   ├── Gephi
 │   └── ...
 └── DataVisualization/    
-    ├── R
+    ├── R/
+    │   ├── Instructions/ 
+    │   ├── BasicsOfR/    
+    │   ├── dplyr    
     │   ├── Plotly
     │   ├── SunburstR
     │   ├── ggplot2
     │   └── ...    
-    ├── Python
+    ├── Python/
     │   ├── Plotly
     │   ├── Seaborn
     │   ├── Matplotlib
     │   ├── 
     │   └── ... 
-    └── JavaScript
+    └── JavaScript/
         ├── 3DSurfacePlot
         ├── MultipleBiPartiteGraph
         ├── RangeSlider
@@ -92,6 +95,12 @@ AI-ML-DataVisualization/
 ## Data Visualization
 
 * R
+  * Instructions
+  * BasicsOfR
+    * Computation
+    * Loading Datasets
+    * Data Cleaning
+    * Basic Statistical Tests
   * Plotly
   * ggplot2
   * SunburstR
@@ -101,7 +110,7 @@ AI-ML-DataVisualization/
   * [Line Chart](https://github.com/SaadAAkash/-1/tree/master/DataVisualization/SimpleLineChartForPapers)
   * [Website Navigation Flow Reseach using Sunburst 3D](https://github.com/SaadAAkash/-1/tree/master/DataVisualization/SunburstD3)
 * Python
-  * Plotly
+  * [Plotly](https://github.com/plotly/documentation/blob/source-design-merge/_posts/python/fundamentals/ipython-notebooks/jupyter_tutorial.ipynb)
   * Seaborn
   * Matplotlib
 

@@ -1,0 +1,47 @@
+C:\Users\ASUS\AppData\Local\Temp\RtmpmIWjeY\downloaded_packages
+
+
+To install dplyr
+install.packages("dplyr")
+
+To load dplyr
+library(dplyr)
+
+data2 <- data1 %>% filter( Salary >= 40000 )
+outliers <- data1 %>% filter(AmountSpent >= 4500, Salary >= 125000)
+outliers2 <- data1 %>% filter(AmountSpent >= (mean(AmountSpent) + 1.5*(IQR(AmountSpent)) )  )
+
+data7 <- dm %>% select(Salary, Age, AmountSpent, OwnHome, Catalogs) %>% filter( Age == "Young", Salary <= 80000, AmountSpent > 1500) %>% arrange(desc(AmountSpent), Catalogs )
+
+
+//visualization:
+Import Dataset & run:
+
+	library(ggplot2)
+	ggplot(dm, aes(x = col_name)) + geom_bar()
+	ggplot(dm, aes(x = History)) + geom_bar()
+	ggplot(dm, aes(x = History, fill = Age)) + geom_bar()
+	ggplot(dm, aes(x = History, fill = Age)) + geom_bar(position = "fill")
+	ggplot(dm, aes(x = History, fill = Age)) + geom_bar(position = "dodge")
+
+	ggplot(dm, aes(x = AmountSpent, fill = Age) ) + geom_histogram(binwidth = 50)
+	ggplot(dm, aes(x = AmountSpent, fill = Age) ) + geom_density(alpha = 0.3)
+
+	qplot(sample = AmountSpent, data = dm)
+	qplot(sample = AmountSpent, data = dm, col = History)
+
+	qplot(sample = AmountSpent, data = dm, col = History)
+
+	ggplot(dm, aes(x = 1, y = AmountSpent, fill = Age) ) + geom_boxplot() + facet_wrap(~OwnHome) 
+
+	ggplot(dm, aes(x = 1, y = AmountSpent, fill = Age) ) + geom_boxplot() + facet_wrap(~OwnHome) 
+
+	ggplot( dm, aes (x= Salary, y = AmountSpent, col = Age, size = Children, shape=OwnHome) ) + geom_point(alpha = 0.4)
++ facet_wrap(~Married)
+
+	//2d density plot shoiws a joint data plot
+
+	ggplot( dm, aes (x= Salary, y = AmountSpent, col = Location) ) + geom_density_2d() 	
+              
+
+
