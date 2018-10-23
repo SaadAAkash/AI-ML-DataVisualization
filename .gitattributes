@@ -1,5 +1,5 @@
 # Basic .gitattributes for a R repo.
-
+DataVisualization/JavaScript/* linguist-vendored
 # Source files
 # ============
 *.Rdata     text
