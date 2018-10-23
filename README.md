@@ -70,7 +70,15 @@ AI-ML-DataVisualization/
 
 ## AI Course Study Codebase (Prolog, LISP, MATLAB, JAVA & JS)
 
-* [AI Prolog Basic Codes](https://github.com/SaadAAkash/AIPrologCodes)
+* AI Prolog Basic Codes
+  * [Instructions](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Instructions)
+  * [EnvironmentSetup](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/EnvironmentSetup.pdf)
+  * Codes
+	  * [Appending](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/append.pl)
+	  * [Computing a Factorial](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/fact.pl)
+	  * [Implementation of Graph](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/graph.pl)
+	  * [Implementation of TowerOfHanoi](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/towerofhanoi.pl)
+	  * [Reverse A List](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/listreverse.pl)
 * [AI Lisp Basic Codes](https://github.com/SaadAAkash/AILispCodes)
 * [AI Java Basic Implementations](https://github.com/SaadAAkash/AICodes)
   * 8 Puzzle (C++)
