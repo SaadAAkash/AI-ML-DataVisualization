@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+
+<style>
+
+	.parallax {
+	    /* The image used */
+	    background-image: url("back1.png");
+
+	    /* Set a specific height */
+	    min-height: 300px; 
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	.parallax2 {
+	    /* The image used */
+	    background-image: url("back3.jpg");
+
+	    /* Set a specific height */
+	    min-height: 300px; 
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	.parallax3 {
+	    /* The image used */
+	    background-image: url("back4.jpg");
+
+	    /* Set a specific height */
+	    min-height: 300px; 
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	.parallax4 {
+	    /* The image used */
+	    background-image: url("back5.jpg");
+
+	    /* Set a specific height */
+	    min-height: 300px; 
+
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	div.a {
+	    text-align: center;
+	}
+
+	div.b {
+	    text-align: left;
+	}
+
+	div.c {
+	    text-align: right;
+	} 
+
+	div.d {
+	    text-align: justify;
+	} 
+
+
+
+	.mainBars rect{
+	  shape-rendering: auto;
+	  fill-opacity: 0;
+	  stroke-width: 0.5px;
+	  stroke: rgb(0, 0, 0);
+	  stroke-opacity: 0;
+	}
+	.subBars{
+		shape-rendering:crispEdges;
+	}
+	.edges{
+		stroke:none;
+		fill-opacity:0.5;
+	}
+
+</style>
+
+<body>
+
+
+
+<div class="a">
+<h1>Project Pigeo</h1>
+<h2>A block-chain and IoT based device to increase social security and awareness against rape and other social insecurities.</p> </h2>
+
+</div>
+
+<div class="parallax"></div>
+
+<div class="b">
+<p>Project Pigeo is a humanitarian project by Techno Rex, from University of Dhaka, with a goal to minimize social insecurity specially for women. The project aims to develop a low-cost technology based solution to minimize social issues i.e. rape, public harassment, hijacking etc.  Hence, for user research, we conducted our extensive survey among 242 people inside & outside Dhaka. Let's see what insights we can harness through some interactive visual data represenations:
+</p>
+<h3>1. An Interactive Data Visualization (Gender VS Witness of Public Harassment)</h3>
+</div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<!-- <script src="http://vizjs.org/viz.v1.1.0.min.js"></script> -->
+<script src="viz.v1.1.0.min.js"></script>
+<script>
+
+// var data=[['Action','fear',1,1],
+// ['Action','joy',1,1],
+// ['Action','joy',1,1],
+// ['Action','joy',1,1],
+// ['Action','sadness',1,1],
+// ['Action','sadness',1,1],
+// ['Action','sadness',1,1],
+// ['Action','sadness',1,1],
+// ['Action','sadness',1,1],
+// ['Adventure','joy',1,1],
+// ['Adventure','sadness',1,1],
+// ['Adventure','sadness',1,1],
+// ['Adventure','sadness',1,1],
+// ['Animation','joy',1,1],
+// ['Biography','joy',1,1],
+// ['Biography','sadness',1,1],
+// ['Biography','sadness',1,1],
+// ['Comedy','fear',1,1],
+// ['Comedy','joy',1,1],
+// ['Comedy','joy',1,1],
+// ['Comedy','joy',1,1],
+// ['Comedy','joy',1,1],
+// ['Comedy','joy',1,1],
+// ['Comedy','joy',1,1],
+// ['Thriller','sadness',1,1],
+// ['Thriller','sadness',1,1],];
+
+var data=[
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Prefer not to say','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','No',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Male','No',1,1],
+['Female','No',1,1],
+['Female','No',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Prefer not to say','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Female','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','No',1,1],
+['Female','No',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','No',1,1],
+['Female','No',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No',1,1],
+['Female','No',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Female','Yes',1,1],
+['Male','No',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Prefer not to say','No',1,,1],
+];
+
+var color ={Male:"#3360CC", Thriller:"#DC4912",  Romance:"#FF9900" , Female: "#F22299", Drama: "#959b1d", Crime: "#DE3211", 'Prefer not to say': "#1d9b5a", Mystery: "#91531d", Adventure:"#db0f23", Fantasy: "#510828"};var svg = d3.select("body").append("svg").attr("width", 960).attr("height", 800);
+var g = svg.append("g").attr("transform","translate(200,50)");
+
+var bp=viz.bP()
+		.data(data)
+		.min(12)
+		.pad(3)
+		.height(600)
+		.width(400)
+		.barSize(45)
+		.fill(d=>color[d.primary]);
+
+g.call(bp);
+
+g.selectAll(".mainBars")
+	.on("mouseover",mouseover)
+	.on("mouseout",mouseout)
+
+g.selectAll(".mainBars").append("text").attr("class","label")
+	.attr("x",d=>(d.part=="primary"? -30: 30))
+	.attr("y",d=>+6)
+	.text(d=>d.key)
+	.attr("text-anchor",d=>(d.part=="primary"? "end": "start"));
+
+g.selectAll(".mainBars").append("text").attr("class","perc")
+	.attr("x",d=>(d.part=="primary"? -130: 130))
+	.attr("y",d=>+6)
+	.text(function(d){ return d3.format("0.0%")(d.percent)})
+	.attr("text-anchor",d=>(d.part=="primary"? "end": "start"));
+
+function mouseover(d){
+	bp.mouseover(d);
+	g.selectAll(".mainBars")
+	.select(".perc")
+	.text(function(d){ return d3.format("0.0%")(d.percent)})
+}
+function mouseout(d){
+	bp.mouseout(d);
+	g.selectAll(".mainBars")
+		.select(".perc")
+	.text(function(d){ return d3.format("0.0%")(d.percent)})
+}
+d3.select(self.frameElement).style("height", "800px");
+</script>
+
+
+<div class="parallax2"></div>
+
+<div class="b">
+<p>Another bunch of staggering insights we observed through this interactive visual data represenations:
+</p>
+<h3>2. An Interactive Data Visualization (Gender VS Feeling of Insecurity)</h3>
+</div>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<!-- <script src="http://vizjs.org/viz.v1.1.0.min.js"></script> -->
+<script src="viz.v1.1.0.min.js"></script>
+<script>
+
+// var data=[['Action','fear',1,1],
+
+var data=[
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Prefer not to say','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No', 1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','No', 1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','No', 1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Prefer not to say','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','No', 1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','No', 1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Female','Yes',1,1],
+['Male','No', 1,1],
+['Male','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Female','Yes',1,1],
+['Prefer not to say','No',1,1],
+];
+
+
+var color ={Fantasy:"#3360CC", Thriller:"#DC4912",  Female:"#FF9900" , Romance: "#F22299", Male: "#959b1d", Crime: "#DE3211", 'Prefer not to say': "#1d9b5a", Mystery: "#91531d", Adventure:"#db0f23", Drama: "#510828"};var svg = d3.select("body").append("svg").attr("width", 960).attr("height", 800);
+var g = svg.append("g").attr("transform","translate(200,50)");
+
+var bp=viz.bP()
+		.data(data)
+		.min(12)
+		.pad(3)
+		.height(600)
+		.width(400)
+		.barSize(45)
+		.fill(d=>color[d.primary]);
+
+g.call(bp);
+
+g.selectAll(".mainBars")
+	.on("mouseover",mouseover)
+	.on("mouseout",mouseout)
+
+g.selectAll(".mainBars").append("text").attr("class","label")
+	.attr("x",d=>(d.part=="primary"? -30: 30))
+	.attr("y",d=>+6)
+	.text(d=>d.key)
+	.attr("text-anchor",d=>(d.part=="primary"? "end": "start"));
+
+g.selectAll(".mainBars").append("text").attr("class","perc")
+	.attr("x",d=>(d.part=="primary"? -130: 130))
+	.attr("y",d=>+6)
+	.text(function(d){ return d3.format("0.0%")(d.percent)})
+	.attr("text-anchor",d=>(d.part=="primary"? "end": "start"));
+
+function mouseover(d){
+	bp.mouseover(d);
+	g.selectAll(".mainBars")
+	.select(".perc")
+	.text(function(d){ return d3.format("0.0%")(d.percent)})
+}
+function mouseout(d){
+	bp.mouseout(d);
+	g.selectAll(".mainBars")
+		.select(".perc")
+	.text(function(d){ return d3.format("0.0%")(d.percent)})
+}
+d3.select(self.frameElement).style("height", "800px");
+</script>
+
+
+<div class="parallax3"></div>
+
+<div class="b">
+<p>Another bunch of staggering insights we observed through this interactive visual data represenations:
+</p>
+<h3>3. Do you wish to help people out facing harassment/mishap/insecurity if you find enough people around you?</h3>
+</div>
+
+
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Number of Response'],
+  ['Yes', 228],
+  ['No', 7],
+  ['I will help regardless of the context/situation', 3],
+  ['Others', 5]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Response Feedback', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+
+
+<div class="parallax4"></div>
+
+<div class="b">
+<p>Another bunch of staggering insights we observed through this interactive visual data represenations:
+</p>
+<h3>4. If you could increase your security by buying high-tech device,how much would you pay for it ?</h3>
+</div>
+
+
+<div id="piechart1"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Ammount people want to pay', 'Number of people who want to pay'],
+  ['500/=', 23],
+  ['1000/=', 49],
+  ['1500/=', 8],
+  ['2000/=', 21],
+  ['3000/=', 16],
+  ['4000/=', 3],
+  ['5000/=', 23],
+  ['10000/=', 4],
+  ['no', 8],
+  ['others',20]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Response Feedback', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+  chart.draw(data, options);
+}
+
+</script>
+
+
+<h3> The average one wants to pay is above 2100/= BDT </h3>
+</body>
+</html>
