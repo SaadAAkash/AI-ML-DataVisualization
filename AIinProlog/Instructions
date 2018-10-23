@@ -1,0 +1,25 @@
+
+EXAMPLES:
+http://www.anselm.edu/homepage/mmalita/culpro/index.html
+
+HOW TO INSTALL IN UBUNTU:
+https://wwu-pi.github.io/tutorials/lectures/lsp/010_install_swi_prolog.html
+
+HOW TO COMPILE:
+http://stackoverflow.com/questions/20447974/prolog-programming-in-ubuntu
+
+Or,
+
+go to the directory
+swipl test1.pl
+?- emacs.
+open file in emacs
+manually compile in emacs
+then keep writing queires in terminal as in : ?- father(adam,X).
+
+SORTING & OTHER EXAMPLES, PROLOG PROGRAMMING GUIDE:
+
+http://kti.mff.cuni.cz/~bartak/prolog/sorting.html
+
+LIST BASICS & TOWER OF HANOI:
+http://www.cs.toronto.edu/~sheila/384/w11/simple-prolog-examples.html
