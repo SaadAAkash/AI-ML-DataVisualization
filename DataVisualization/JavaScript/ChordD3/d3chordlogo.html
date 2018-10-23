@@ -1,0 +1,71 @@
+<!-- http://bl.ocks.org/npashap/2d76492981106691cdcf843d7e3f765a -->
+
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  font: 10px sans-serif;
+}
+
+svg text{
+  text-anchor:middle;
+  font-size:18px;
+}
+svg .values text{
+  pointer-events:none;
+  stroke-width: 0.5px;
+}
+.groups:hover{
+  cursor:pointer;
+  font-weight:bold;
+}
+
+</style>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://vizjs.org/viz.v1.1.2.min.js"></script>
+
+
+<script>
+
+var width=960, height=960
+	,outerRadius = Math.min(width, height) * 0.5 - 40
+    ,innerRadius = outerRadius - 30;
+	
+/*var m = [
+  [11975,  5871, 8916, 2868],
+  [ 1951, 10048, 2060, 6171],
+  [ 8010, 16145, 8090, 8045],
+  [ 1013,   990,  940, 6907]
+];*/
+
+var m = [
+  [ 4000,  1000, 20000,1000],
+  [ 0000, 3000, 15000, 13000],
+  [ 0000, 0000, 2000, 4000],
+  [ 000,   000,  000, 0000]
+];
+
+
+//turn matrix into table
+var data=[];
+m.forEach(function(r,i){ r.forEach(function(c,j){ data.push([i,j,c])})});
+
+var colors = ["#000000", "#FFDD89", "#957244", "#F26223"];
+
+var ch = viz.ch().data(data).padding(.05)
+	  	  .innerRadius(innerRadius)
+	  	  .outerRadius(outerRadius)
+	  	  .label(function(d){ return ""})
+	  	  .startAngle(1.5*Math.PI)
+	  	  .fill(function(d){ return colors[d];});
+
+var svg = d3.select("body").append("svg").attr("height",height).attr("width",width);
+
+svg.append("g").attr("transform", "translate("+width/2+","+height/2+")").call(ch);
+
+// adjust height of frame in bl.ocks.org
+d3.select(self.frameElement).style("height", height+"px").style("width", width+"px");
+      
+</script>

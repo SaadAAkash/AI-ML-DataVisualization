@@ -42,25 +42,28 @@ AI-ML-DataVisualization/
 │   ├── Gephi
 │   └── ...
 └── DataVisualization/    
-    ├── R
+    ├── R/
+    │   ├── Instructions/ 
+    │   ├── BasicsOfR/    
+    │   ├── dplyr    
     │   ├── Plotly
     │   ├── SunburstR
     │   ├── ggplot2
     │   └── ...    
-    ├── Python
+    ├── Python/
     │   ├── Plotly
     │   ├── Seaborn
     │   ├── Matplotlib
     │   ├── 
     │   └── ... 
-    └── JavaScript
+    └── JavaScript/
         ├── 3DSurfacePlot
+        ├── ChordD3
         ├── MultipleBiPartiteGraph
+        ├── RadarSmoothed
         ├── RangeSlider
         ├── SimpleLineChart
         ├── SunburstD3
-        ├── RadarSmoothed
-        ├── ChordD3
         └── ...
 
 ```
@@ -91,19 +94,32 @@ AI-ML-DataVisualization/
 
 ## Data Visualization
 
-* R
-  * Plotly
-  * ggplot2
-  * SunburstR
 * JavaScript (Plotly JS, D3 JS, Sigma JS)
-  * [Data Surface Plotting in 3D](https://github.com/SaadAAkash/-1/tree/master/DataVisualization/3DSurfacePlot)
-  * [Data Range Slider](https://github.com/SaadAAkash/-1/tree/master/DataVisualization/RangeSlider)
-  * [Line Chart](https://github.com/SaadAAkash/-1/tree/master/DataVisualization/SimpleLineChartForPapers)
-  * [Website Navigation Flow Reseach using Sunburst 3D](https://github.com/SaadAAkash/-1/tree/master/DataVisualization/SunburstD3)
+  * [Data Surface Plotting in 3D](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/JavaScript/3DSurfacePlot)
+  * [Chord in D3JS](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/JavaScript/ChordD3)
+  * [MultipleBiPartiteGraph in D3JS](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/JavaScript/MultipleBiPartiteGraph)
+  * [RadarSmoothed](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/JavaScript/RadarSmoothed)
+  * [Data Range Slider](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/RangeSlider)
+  * [Line Chart](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/SimpleLineChart)
+  * [Website Navigation Flow Reseach using Sunburst 3D](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/SunburstD3)
 * Python
-  * Plotly
-  * Seaborn
+  * [Plotly](https://github.com/plotly/documentation/blob/source-design-merge/_posts/python/fundamentals/ipython-notebooks/jupyter_tutorial.ipynb)
+  * [Seaborn](https://github.com/mwaskom/seaborn/tree/master/examples)
   * Matplotlib
+* R
+  * [Instructions](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/Instructions)
+  * BasicsOfR
+    * [Computation](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/Part1.R)
+    * [Loading Datasets](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/Part1.R)
+    * [Data Cleaning](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/Part1.R)
+    * [Basic Statistical Tests](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/Part2.R)
+    * [NA Handling](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/BasicsOfR/NAHandling.R)
+  * [dplyr](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/dplyr.pdf)
+  * Plotly
+  * [ggplot2](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/ggplot2.R)
+  * [ggplot2 Notes](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/R/ggplot2Notes.txt)
+  * SunburstR
+* [Sample Data](https://github.com/SaadAAkash/AI-ML-DataVisualization/DataVisualization/SampleData)
 
 ## Contributing
 

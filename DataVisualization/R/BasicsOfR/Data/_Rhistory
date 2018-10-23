@@ -1,0 +1,113 @@
+3+4
+4/5
+a <- 5
+b <- 6
+c <- a^b
+(c <- a^b)
+gm <- read.csv("C:/Users/Khan/Dropbox/North South University/Data Analysis Training in R for facs/Data/GlobalMobileAppsExercise.csv")
+View(gm)
+str(gm)
+summary(gm)
+library(dplyr)
+gm2 <- select(gm, device, app_store, region, average_rating)
+View(gm2)
+gm3 <- mutate(gm, size_per_scrn = filesize/num_screenshot)
+View(gm3)
+gm4 <- filter(gm, region == "US" & rank <= 10 & app_type == "free")
+View(gm4)
+gm5 <- select(filter(gm, region == "US" & rank <= 10 & app_type == "free"), filesize, average_rating, category)
+View(gm5)
+library(ggplot2)
+View(gm)
+ggplot(gm, aes(x = category)) + geom_bar()
+ggplot(gm, aes(x = device)) + geom_bar()
+ggplot(gm, aes(x = device, fill = region)) + geom_bar()
+ggplot(gm, aes(x = num_screenshot, y = average_rating)) + geom_point()
+ggplot(gm, aes(x = filesize, y = average_rating)) + geom_point()
+ggplot(gm, aes(x = rank, y = average_rating)) + geom_point()
+ggplot(gm, aes(x = filesize, y = num_screenshot)) + geom_point()
+dm <- read.csv("C:/Users/Khan/Dropbox/North South University/Data Analysis Training in R for facs/Data/DirectMarketing.csv")
+View(dm)
+ggplot(dm, aes(x=Salary, y = AmountSpent)) + geom_point()
+ggplot(dm, aes(x=Salary, y = AmountSpent, color = Age)) + geom_point()
+ggplot(dm, aes(x=Salary, y = AmountSpent, color = Age, shape = Gender)) + geom_point()
+ggplot(dm, aes(x=Salary, y = AmountSpent, color = Age, shape = Gender, size = Catalogs)) + geom_point()
+ggplot(dm, aes(x=Salary, y = AmountSpent, color = Age, shape = Gender, size = Catalogs)) + geom_point(alpha = 0.4)
+ggplot(dm, aes(x=Salary, y = AmountSpent, color = Age, shape = Gender, size = Catalogs)) + geom_point(alpha = 0.4) + facet_wrap(~ Location)
+ggplot(dm, aes(x=Salary, y = AmountSpent, color = Age, shape = Gender, size = Catalogs)) + geom_point(alpha = 0.4) + facet_wrap(~ Location + Married)
+library(partykit)
+model = ctree(SType ~ OwnHome + Location + Salary  , data = dm)
+dm$SType <- ifelse(dm$AmountSpent <= 800, "Low", ifelse(dm$AmountSpent <= 1400, "Medium", "High"))
+dm$SType <- as.factor(dm$SType)
+model = ctree(SType ~ OwnHome + Location + Salary  , data = dm)
+plot(model, gp = gpar(fontsize = 8))
+df <- read.csv("https://query.data.world/s/itxdviietv5smvk55ntmzswibf3cjx", header=TRUE, stringsAsFactors=FALSE)
+bmi_wide <- read.csv("C:/Users/Khan/Dropbox/North South University/Data Analysis Training in R for facs/Data/bmi_wide.csv", header=FALSE)
+View(bmi_wide)
+library(tidyr)
+bmi_long <- gather(bmi_wide, year, bmi_val, - Country)
+bmi_wide <- read.csv("C:/Users/Khan/Dropbox/North South University/Data Analysis Training in R for facs/Data/bmi_wide.csv")
+View(bmi_wide)
+bmi_long <- gather(bmi_wide, year, bmi_val, - Country)
+View(bmi_long)
+dm <- read.csv("C:/Users/Khan/Dropbox/North South University/Data Analysis Training in R for facs/Data/DirectMarketing.csv")
+View(dm)
+dm2 <- dm
+dm2$LocationCaps <- toupper(dm2$Location)
+dm2$MarriedLower <- tolower(dm2$Married)
+View(dm2)
+dm[34:100, 1:5]
+which(dm$Salary == max(dm$Salary))
+max_spend <- dm[dm$AmountSpent == max(dm$AmountSpent)]
+max_spend <- dm[dm$AmountSpent == max(dm$AmountSpent), ]
+View(max_spend)
+above_average_sal <- dm[dm$Salary >= mean(dm$Salary),]
+View(above_average_sal)
+boxplot(dm$AmountSpent)
+boxplot(dm$Salary)
+plot(x = dm$Salary, y = dm$AmountSpent)
+dm_NA <- dm[is.na(dm$History),]
+dm_noNA <- na.omit(dm)
+summary(dm_NA)
+View(above_average_sal)
+dmNAindex <- sample(dm, 300)
+?sample
+dmNAindex <- sample(dm, 30)
+dmNAindex <- sample(100, 30)
+dmNAindex <- sample(nrow(dm), 300)
+dmNA <- dm[sample, ]
+dmNA <- dm[dmNAindex, ]
+View(dmNA)
+dmNAindex <- sample(nrow(dm), 100)
+dmNA <- dm[dmNAindex, ]
+View(dmNA)
+dmNA$AmountSpent <- NA
+dmNASpent <- dm
+dmNASpent$AmountSpent[dmNAindex] <- NA
+View(dmNASpent)
+summary(dmNASpent)
+setwd("C:/Users/Khan/Dropbox/North South University/Data Analysis Training in R for facs/Data")
+write.csv(dmNASpent, file = "DirectMarketingMissing.csv")
+dmNA <- read.csv("C:/Users/Khan/Dropbox/North South University/Data Analysis Training in R for facs/Data/DirectMarketingMissing.csv")
+View(dmNA)
+dmNA$X <- NULL
+View(dmNA)
+summary(dmNA)
+summary(dmNA$AmountSpent)
+dmNA$AmountSpentImputed <- dmNA$AmountSpent
+NAindex <- is.na(dmNA$AmountSpent)
+NAindex <- which(is.na(dmNA$AmountSpent))
+dmNA$AmountSpentImputed[NAindex] <- mean(dmNA$AmountSpent, na.rm = T)
+summary(dmNA$AmountSpentImputed)
+summary(dmNA$History)
+table(dmNA$Location, dmNA$Age, dmNA$History)
+table(dmNA$Gender, dmNA$History)
+table(dmNA$OwnHome, dmNA$History)
+dm <- read.csv("C:/Users/Khan/Dropbox/North South University/Data Analysis Training in R for facs/Data/DirectMarketing.csv")
+View(dm)
+dm_noNA <- na.omit(dm)
+dm_NA <- dm[is.na(dm$History),]
+table(dm_NA$Gender, dm_NA$Location)
+library(dplyr)
+summary(dm_NA)
+summary(dm)
