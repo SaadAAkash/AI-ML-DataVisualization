@@ -81,12 +81,12 @@ AI-ML-DataVisualization/
 	  * [Reverse A List](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/aiprolog/AIinProlog/Codes/listreverse.pl)
 
 * AI Lisp Basic Codes
-  * [Recursion]()
-  * [MinMax]()
-  * [UserInput]()
-  * [Input+MinMax]()
-  * [Removal]()
-  * [SelectionSort]()
+  * [Recursion](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_a_recursion.lisp)
+  * [MinMax](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_b_minmax.lisp)
+  * [UserInput](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_c_userinput.lisp)
+  * [Input+MinMax](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_d_input_minmax.lisp)
+  * [Removal](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_e_removal.lisp)
+  * [SelectionSort](https://github.com/SaadAAkash/AI-ML-DataVisualization/blob/master/AIinLISP/prob_f_selectionsort.lisp)
 
 * [AI Java Basic Implementations](https://github.com/SaadAAkash/AICodes)
   * 8 Puzzle (C++)
